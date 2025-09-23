@@ -1,5 +1,6 @@
 package me.dio.domian.model;
 
+
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -15,7 +16,6 @@ public class Account {
     private String number;
 
     private String agency;
-
 
     @Column(precision = 13, scale = 2)
     private BigDecimal balance;
@@ -62,4 +62,5 @@ public class Account {
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
+
 }

@@ -1,10 +1,18 @@
 package me.dio.domian.model;
 
-import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity(name = "tb-user")
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+
+@Entity(name = "tb_user")
 public class User {
 
     @Id
@@ -72,4 +80,5 @@ public class User {
     public void setNews(List<News> news) {
         this.news = news;
     }
+
 }
